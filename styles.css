@@ -2,13 +2,19 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
-  background-color: #13817d15;
+  background-color: #13817d09;
+  color: #333;
 }
 
 /* Header */
 header h1 {
   margin: 1rem 4rem 1rem;
   font-size: 32px;
+}
+.live-feed{
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
 }
 .nav {
   background: #0d5957;
@@ -50,7 +56,7 @@ header h1 {
 
 .btn:hover {
   background-color: #d9d9d9;
-  color: #0d5957;
+
 }
 
 a#navbarDropdown {
@@ -60,16 +66,54 @@ a#navbarDropdown {
 a#navbarDropdown:hover {
   color: #0d5957;
 }
+/* Live Feed */
+.live-feed{
+  margin: 2rem 2rem 0;
+  padding: 1rem 3rem;
+  border: 2px solid #0d5957;
+  border-radius: 4px;
+}
+.live-feed .tb-title {
+  padding-bottom: .5rem;
+  color: #0d5957;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.live-feed th{
+ color: #333;
+}
+/* Live time */
+.time {
+  margin-left: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+}
+#hours, #seconds, #minutes{
+  color: #0d5957;
+  font-weight: 600;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
 
-/* Body */
-
+/* Carousel*/
+.caro-outer{
+  display: flex;
+  justify-content: center;
+}
 .slider {
   padding-top: 2%;
+  margin: 3rem 0;
 }
 
 .carousel-item {
-  height: 500px;
+  height: 350px;
+  width: 100%;
 }
+
+/* Body */
 
 section {
   margin: 2rem 4rem;
@@ -82,14 +126,38 @@ section-1 > .container {
   display: flex;
 }
 
+/* General styling */
+.title { 
+  padding: 2rem 0 .5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.sub-title {
+  padding: 1rem 0;
+  text-transform: capitalize;
+}
+ul, p {
+  line-height: 1.9;
+}
+p{
+  font-size: 16px;
+}
+
 #symptoms,
 #vaccinations,
 #after-covid19 {
   padding: 1rem 0;
 }
+.symp-test {
+  margin: 0 auto;
+}
 
 .card {
   display: inline-flex;
+}
+.card-info {
+  display: flex;
+  justify-content: center;
 }
 
 .card.text-dark.bg-light.mb-3 {
@@ -107,6 +175,29 @@ i.fas.fa-house-user {
 a.card-link {
   color: #13807c;
 }
+/* Video Styling */
+.cov-vid{
+  cursor: pointer;
+}
+/* Vaccination centres map */
+.map-container-2{
+  overflow:hidden;
+  padding-bottom: 20%;
+  position:relative;
+  height:0;
+  
+  }
+  .map-container-2 iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width: 80vw;
+  position:absolute;
+  }
+  iframe{
+      height: 300px;
+      width: 70%;
+  }
 
 /* Footer */
 .bg-light {
