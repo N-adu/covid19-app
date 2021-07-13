@@ -81,7 +81,18 @@ a#navbarDropdown:hover {
   letter-spacing: 1px;
 }
 .live-feed th{
+  margin: 0 15px;
  color: #333;
+ text-align: center;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+}
+.live-feed td{
+  font-weight:600;
+  font-size: 1.1rem;
+  color: red;
+  text-align: center;
+  letter-spacing: 1px;
 }
 /* Live time */
 .time {
