@@ -2,8 +2,56 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
-  background-color: #13817d09;
+  background-color: #13817d04;
   color: #333;
+}
+/* General styling */
+.title { 
+  padding: 3rem 0 .7rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.title.sym {
+  padding: 2rem 0;
+  text-align: center;
+}
+.sub-title-l, .sub-title-r, h4 {
+  padding: .8rem 0 0.5rem;
+  text-transform: capitalize;
+}
+.sub-title-l {
+  text-align: left;
+}
+.sub-title-r {
+  text-align: right;
+}
+ul, p {  
+  line-height: 1.8;
+}
+p{
+  font-size: 1rem;
+}
+/* .info-text p {
+  margin-top: 2rem;
+  
+} */
+#symptoms,
+#vaccinations,
+#after-covid19 {
+  padding: .5rem 0;
+}
+.img-box {
+  padding-top: 2rem; 
+  margin: 1rem;
+}
+.img-box img {
+  margin-left: 2rem;
+  width: 77%;
+  height: 45vh;
+}
+.symp-test {
+  margin: 0 auto;
 }
 
 /* Header */
@@ -19,7 +67,13 @@ header h1 {
 .nav {
   background: #0d5957;
 }
-
+.navbar-brand {
+  padding: 0 1.6rem;
+  font-size: 2rem;
+}
+.nav-link{
+  padding: 0 50px;
+}
 .navbar-light:hover .navbar-nav:hover .nav-link:hover {
   background: #d9d9d9;
   border-radius: 2px;
@@ -70,7 +124,7 @@ a#navbarDropdown:hover {
 .live-feed{
   margin: 2rem 2rem 0;
   padding: 1rem 3rem;
-  border: 2px solid #0d5957;
+  border: 2px solid #0d59566c;
   border-radius: 4px;
 }
 .live-feed .tb-title {
@@ -100,7 +154,8 @@ a#navbarDropdown:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; 
+  height: 100%;
+  transition: .3s ease; 
 }
 #hours, #seconds, #minutes{
   color: #0d5957;
@@ -108,67 +163,39 @@ a#navbarDropdown:hover {
   font-size: 3rem;
   letter-spacing: 1px;
 }
-
-/* Carousel*/
-.caro-outer{
-  display: flex;
-  justify-content: center;
-}
-.slider {
-  padding-top: 2%;
-  margin: 3rem 0;
-}
-
-.carousel-item {
-  height: 350px;
-  width: 100%;
+.time .colon{
+  color: #13807c;
+  font-weight: 600;
+  font-size: xx-large;
+  padding: 0 2px;
 }
 
 /* Body */
 
 section {
-  margin: 2rem 4rem;
+  margin: 1rem 4rem;
+  padding: 1rem 0;
 }
 section h2 {
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
 }
 
 section-1 > .container {
   display: flex;
 }
-
-/* General styling */
-.title { 
-  padding: 2rem 0 .5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.sub-title {
-  padding: 1rem 0;
-  text-transform: capitalize;
-}
-ul, p {
-  line-height: 1.9;
-}
-p{
-  font-size: 16px;
+/* Home */
+.info-text.home p {
+  height: 50vh;
 }
 
-#symptoms,
-#vaccinations,
-#after-covid19 {
-  padding: 1rem 0;
-}
-.symp-test {
-  margin: 0 auto;
-}
-
+/* CARD styling */
 .card {
   display: inline-flex;
+
 }
 .card-info {
   display: flex;
-  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .card.text-dark.bg-light.mb-3 {
@@ -184,12 +211,34 @@ i.fas.fa-house-user {
 }
 
 a.card-link {
-  color: #13807c;
+  color: #fff;
+  text-decoration: none;
+}
+a.card-link:hover{
+  color: #d9d9d9;
 }
 /* Video Styling */
 .cov-vid{
   cursor: pointer;
 }
+/* ISOLATION */
+#isolation .row ul{
+  margin-right: 2rem;
+}
+/* Vaccinations */
+.b-title {
+  margin: 2rem 0 1rem;
+  text-transform: capitalize;
+}
+#vaccinations .sub-title {
+  margin-left: 2rem;
+  text-align: right;
+}
+.vac-info-text p {
+  width: 100%;
+  text-align: right;
+}
+
 /* Vaccination centres map */
 .map-container-2{
   overflow:hidden;
@@ -209,6 +258,40 @@ a.card-link {
       height: 300px;
       width: 70%;
   }
+/* Booking Form */
+.b-form {
+  padding: 1.6rem;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 6px 4px 8px 2px rgba(0,0,0,0.08); 
+box-shadow: 6px 4px 8px 2px rgba(0,0,0,0.08);
+}
+.form-group label {
+  padding: 18px 0 2px 3px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.form-group input.error {
+  border: 1px solid red;
+  transition: .2s ease;
+}
+.form-group small {
+  color: red;
+  font-size: 12px;
+  margin-left: 6px;
+  position: absolute;
+  transition: .2s ease;
+  visibility: hidden;
+}
+.form-group small.error {
+visibility: visible;
+}
+.form-group button {
+  padding-top: 1rem;
+}
+.form-control {
+  padding: .30rem .15rem;
+}
 
 /* Footer */
 .bg-light {
@@ -217,8 +300,33 @@ a.card-link {
 
 .footer p {
   color: #fff;
+  text-align: center;
 }
 
 /* media query for larger screen size since this is a mobile first approach */
 @media screen and (min-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .live-feed{
+    margin: 1.5rem auto;
+    width: 80%; 
+  }
+  .time {
+    visibility: hidden;
+  }
+  .img-box img{
+    margin-left: 0;
+   
+    
+  }
+  .title, .sub-title-l, .sub-title-r {
+    text-align: center;
+  }
+  .card-info {
+    width: 100%;
+    
+}
+.vac-info-text p {
+  text-align: left;
+}
 }
