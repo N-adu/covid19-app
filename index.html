@@ -1,13 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Group 4: Covid-19 App</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cov-Info</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -20,15 +17,14 @@
 </head>
 
 <body>
-
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
-
   <header>
-    <h1>COVID-19 App</h1>
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Cov-Info</a>
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,10 +32,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-item" style="padding: 0 1rem;">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" style="padding: 0 1rem;">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Symptoms
@@ -54,10 +50,10 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#vaccinations">Vaccination</a>
+              <a class="nav-link" href="#vaccinations" style="padding: 0 1rem;">Vaccination</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#after-covid19">After COVID-19</a>
+              <a class="nav-link" href="#after-covid19" style="padding: 0 1rem;">After COVID-19</a>
             </li>
           </ul>
           <form class="d-flex">
@@ -68,170 +64,125 @@
       </div>
     </nav>
   </header>
-  <div class="container">
-    <div class="row">
-      <!-- <div class="col">
-        <div class="date-time">
-          <div class="date">
-            <div id="todaysDate">
-              <p>25-06-21</p>
-            </div>
-          </div>
-          
-        </div>
-      </div> -->
-      <div class="col">
-        <div class="live-feed">
-          <div class="tb-title">
-            <h4>Live UK Stats</h4>
-          </div>         
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Total Cases</th>
-                <th scope="col">Total Recovered</th>
-                <th scope="col">Total Deaths</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr id="dataResult">
-                
-                
-              </tr>
-              
-              
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="col">
-        <div class="time">
-          <div id="hours"></div>
-          <div class="colon">:</div>
-          <div id="seconds"></div>
-          <div class="colon">:</div>
-          <div id="minutes"></div>
-        </div>
-
-      </div>
-      
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="caro-outer">
-        <div class="slider">
-          <div class="container">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner mx-auto">
-                <div class="carousel-item active">
-                  <img src="./Images/img-1.png" class="d-block w-100" alt="stats1">
-                </div>
-                <div class="carousel-item">
-                  <img src="./Images/img-2.png" class="d-block w-100" alt="stats2">
-                </div>
-                <div class="carousel-item">
-                  <img src="./Images/img-3.png" class="d-block w-100" alt="stats3">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <section id="symptoms" class="section-1">
-    <div class="title">
-      <h2> Symptoms, Testing & Self Isolation</h2>
-    </div>
-    <div class="card-info">
-      <article class="symp-test">
-        <div class="card text-dark bg-light mb-3 mx-auto" style="max-width: 18rem;">
-          <i class="fas fa-search"></i>
-          <div class="card-header">Symptom checker</div>
-          <div class="card-body">
-            <h5 class="card-title">Check your symptoms quickly</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">More</a>
-          </div>
-        </div>
-        <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-          <i class="fas fa-vial"></i>
-          <div class="card-header">Testing centres</div>
-          <div class="card-body">
-            <h5 class="card-title">Find a testing centre near you</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">More</a>
-          </div>
-        </div>
-        <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-          <i class="fas fa-house-user"></i>
-          <div class="card-header">Self isolation tips</div>
-          <div class="card-body">
-            <h5 class="card-title">Stay healthy while self isolating</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">More</a>
-          </div>
-        </div>
-      </article>
-    </div>
-    <article>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="title">
-              <h2>What is COVID 19?</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            
-            <div class="info-text">
-              <p>The first case of COVID-19 was reported Dec. 1, 2019, and the cause was a then-new coronavirus later
-                named
-                SARS-CoV-2. SARS-CoV-2 may have originated in an animal and changed (mutated) so it could cause illness
-                in
-                humans.
-              </p>
-              <p>
-                As of now, researchers know that the coronavirus is spread through droplets and virus particles released
-                into the air when an infected person breathes, talks, laughs, sings, coughs or sneezes. Larger droplets
-                may fall to the ground in a few seconds, but tiny infectious particles can linger in the air and
-                accumulate in indoor places, especially where many people are gathered and there is poor ventilation.
-                This
-                is why mask-wearing, hand hygiene and physical distancing are essential to preventing COVID-19.
-              </p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="img-box">
-              <img src="Images/undraw_medical_research_qg4d.svg" alt="medical image" class="img-fluid">
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-    
-    <div class="container">
+  <div class="container-fluid">
       <div class="row">
         <div class="col">
+          <div class="live-feed">
+            <div class="tb-title">
+              <h4>Live UK Stats</h4>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Total Cases</th>
+                  <th scope="col">Total Recovered</th>
+                  <th scope="col">Total Deaths</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="dataResult"></tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col">
+          <div class="time">
+            <div id="hours"></div>
+            <div class="colon">:</div>
+            <div id="seconds"></div>
+            <div class="colon">:</div>
+            <div id="minutes"></div>
+          </div>
+
+        </div>
+      </div>
+  <!-- HOME -->
+  <div class="container-fluid">
+    <section id="home">
+      <div class="row">
+        <div class="col">
+          <div class="title">
+            <h2>What is COVID 19?</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="info-text home">
+            <p>The first case of COVID-19 was reported Dec. 1, 2019, and the cause was a then-new
+              coronavirus later
+              named SARS-CoV-2. <br>
+              As of now, researchers know that the coronavirus is spread through droplets and virus
+              particles released
+              into the air when an infected person breathes, talks, laughs, sings, coughs or sneezes.
+              Larger droplets
+              may fall to the ground in a few seconds, but tiny infectious particles can linger in the air
+              and
+              accumulate in indoor places, especially where many people are gathered and there is poor
+              ventilation.
+              This is why mask-wearing, hand hygiene and physical distancing are essential to preventing
+              COVID-19.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="img-box">
+            <img src="images/undraw_medical_research_qg4d.svg" alt="medical image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    <!-- SYMPTOMS -->
+    <section id="symptoms">
+      <div class="row">
+        <div class="col">
+          <div class="title sym">
+            <h2> Symptoms, Testing & Self Isolation</h2>
+          </div>
+          <div class="card-info">
+            <article class="symp-test">
+              <div class="card text-dark bg-light mb-3 mx-auto" style="max-width: 18rem;">
+                <i class="fas fa-search"></i>
+                <div class="card-header">Symptom checker</div>
+                <div class="card-body">
+                  <h5 class="card-title">Check your symptoms quickly</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up
+                    the bulk of the card's
+                    content.</p>
+                  <a href="#" class="card-link">More</a>
+                </div>
+              </div>
+              <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+                <i class="fas fa-vial"></i>
+                <div class="card-header">Testing centres</div>
+                <div class="card-body">
+                  <h5 class="card-title">Find a testing centre near you</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up
+                    the bulk of the card's
+                    content.</p>
+                  <a href="https://maps.test-and-trace.nhs.uk/" class="card-link">More</a>
+                </div>
+              </div>
+              <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+                <i class="fas fa-house-user"></i>
+                <div class="card-header">Self isolation tips</div>
+                <div class="card-body">
+                  <h5 class="card-title">Stay healthy while self isolating</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up
+                    the bulk of the card's
+                    content.</p>
+                  <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-and-treatment/" class="card-link">More</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-12">
           <div class="sub-title">
             <h4>what are the main symptoms and next steps</h4>
           </div>
@@ -246,556 +197,399 @@
             About 1 in 3 people with COVID-19 do not have symptoms but can still infect others.
           </p>
         </div>
-
       </div>
+      <div class="row">
+        <div class="col col-sm-12">
+          <div class="sub-title">
+            <h5>How to treat symptoms at home:</h5>
+          </div>
 
-
+          <ul>
+            <li>Drink plenty of fluids. Drink enough water so that your pee is a pale, clear colour.</li>
+            <li>Avoid alcohol as this will make you more dehydrated. There is also evidence that people with
+              COVID-19 infection are prone to liver damage, which can be worsened by drinking alcohol.
+            </li>
+            <li>Get plenty of rest. You should isolate yourself at home if you have any symptoms of
+              coronavirus,
+              and avoid any strenuous activity whilst you are unwell.</li>
+            <li>Use over-the-counter medicines to treat some of your symptoms.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- TESTING -->
+    <section id="testing">
+      <div class="row">
+        <div class="col">
+          <div class="title">
+            <h2>Testing</h2>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col">
           <div class="sub-title">
-            <h4>What to do if you notice symptoms?</h4>
+            <h4>Self Testing</h4>
           </div>
-
-          <div class="info-text">
-            <p>Stay home. Most people with COVID-19 have mild illness and can recover at home without medical care. Do
-              not leave your home, except to get medical care. Do not visit public areas.
-              Take care of yourself. Get rest and stay hydrated. Take over-the-counter medicines, such as acetaminophen,
-              to help you feel better.
-              Stay in touch with your doctor. Call before you get medical care. Be sure to get care if you have trouble
-              breathing, or have any other emergency warning signs, or if you think it is an emergency.
-              Avoid public transportation, ride-sharing, or taxis.
-            </p>
+          <div class="cov-vid">
+            <div class="video-txt">
+              <p>Click the video for instructions on self-testing. To pause the video, click again.</p>
+            </div>
+            <video src="images/COVID19-Self-Test.mp4" class="img-fluid" id="video"></video>
           </div>
         </div>
-
       </div>
-
-      <div class="sub-title">
-        <h4>Testing-Who to contact to book a testing, where to get tested</h4>
-      </div>
-
-
-      <p>
-        Contact your healthcare provider. Book on the NHS website
-        <a href="https://www.gov.uk/get-coronavirus-test"></a>
-      </p>
-      <p>
-        You can get a PCR test if you have symptoms of COVID-19 or a rapid lateral flow test if you do NOT have
-        any symptoms.</p>
-
-      <div class="col">
-        <div class="cov-vid">
-          <div class="video-txt">
-            <h5>Click the video for instructions on self-testing. To pause the video, click again.</h5>
-          </div>
-          <video src="Images/Covid-self-test-swab.mp4" class="img-fluid" id="video"></video>
+      <div class="row">
+        <div class="col">
+          <p>
+            Contact your healthcare provider. Book on the NHS website
+            <a href="https://www.gov.uk/get-coronavirus-test">Here</a>
+            You can get a PCR test if you have symptoms of COVID-19 or a rapid lateral flow test if you do
+            NOT have
+            any symptoms.
+          </p>
         </div>
       </div>
-
-      <div class="sub-title">
-        <h4>Self isolating & treating symptoms</h4>
-      </div>
-
-      Self-isolation is when you do not leave your home because you have or might have coronavirus (COVID-19).
-      This is done to stop the virus from spreading to other people.
-
-
+        
     </div>
-
-
-    <div class="row">
-      <div class="col">
-        <div class="info-text">
+    </section>
+    <!-- ISOLATION -->
+    <section id="isolation">
+      <div class="row">
+        <div class="col">
           <div class="sub-title">
-            <h4>When to self isolate:</h4>
+            <h4>When to Self-Isolate</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          
+          <ul>
+            <li>You have any symptoms of COVID-19 (a high temperature, a new, continuous cough or a loss or
+              change
+              to your sense of smell or taste)</li>
+            <li>You've tested positive for COVID-19 – this means you have the virus</li>
+            <li>someone you live with has symptoms or tested positive</li>
+            <li>You've been told you've been in contact with someone who tested positive</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+    <section id="vaccinations">
+      <div class="row">
+        <div class="col">
+          <div class="title">
+            <h2>Vaccinations</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col">
-            <ul>
-              <li>You have any symptoms of COVID-19 (a high temperature, a new, continuous cough or a loss or change
-                to your sense of smell or taste)</li>
-              <li>You've tested positive for COVID-19 – this means you have the virus</li>
-              <li>someone you live with has symptoms or tested positive</li>
-              <li>Someone in your childcare or support bubble has symptoms and you’ve been in close contact with
-                them since their symptoms started or during the 48 hours before they started</li>
-              <li>Someone in your childcare or support bubble tested positive and you’ve been in close contact with
-                them since they had the test or in the 48 hours before their test
-              </li>
-              <li>You've been told you've been in contact with someone who tested positive</li>
-            </ul>
-          </div>
           <div class="col">
             <div class="img-box">
-              <img src="Images/Undraw_Relaxing_At_Home_Re_Mror.vectornator/Thumbnail.png" alt="woman relaxing at home"
-                class="img-fluid">
+              <img src="images/undraw_medicine_b1ol.svg" alt="Picture of Doctors" class="img-fluid">
             </div>
           </div>
-        </div>
-
-
-        <div class="sub-title">
-          <h4>How to treat symptoms at home:</h4>
-        </div>
-
-
-
-        <ul>
-          <li>Drink plenty of fluids. Drink enough water so that your pee is a pale, clear colour.</li>
-          <li>Avoid alcohol as this will make you more dehydrated. There is also evidence that people with
-            COVID-19 infection are prone to liver damage, which can be worsened by drinking alcohol.</li>
-          <li>Get plenty of rest. You should isolate yourself at home if you have any symptoms of coronavirus,
-            and avoid any strenuous activity whilst you are unwell.</li>
-          <li>Use over-the-counter medicines to treat some of your symptoms.</li>
-        </ul>
-
-      </div>
-
-
-    </div>
-
-    </div>
-    </div>
-    </div>
-
-
-    </article>
-  </section>
-
-
-  <section id="vaccinations" class="section-2">
-
-
-    <article>
-      <div class="container">
-        <div class="row">
           <div class="col">
-            <div class="title">
-              <h2>Vaccinations</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            
-            <p>
-              The coronavirus (COVID-19) vaccine is safe and effective. It gives you the best protection against
-              COVID-19. The Moderna, Pfizer-BioNTech and Oxford-AstraZeneca vaccines are currently available in the UK.
-            </p>
-            <div class="sub-title">
+            <div class="sub-title-r">
               <h4> How safe is the COVID-19 vaccine? </h4>
             </div>
-            <div class="info-text">
+            <div class="vac-info-text">
               <p>
-                The vaccines approved for use in the UK have met strict standards of safety, quality and effectiveness
+                The vaccines approved for use in the UK have met strict standards of safety, quality and
+                effectiveness
                 set
                 out by the independent Medicines and Healthcare products Regulatory Agency (MHRA). <br>
 
-                Any COVID-19 vaccine that is approved must go through all the clinical trials and safety checks all
+                Any COVID-19 vaccine that is approved must go through all the clinical trials and safety
+                checks all
                 other
                 licensed medicines go through. The MHRA follows international standards of safety. <br>
 
-                Other vaccines are being developed and they will only be available on the NHS once they have been
-                thoroughly tested to make sure they are safe and effective. <br>
-
-                So far, millions of people have been given a COVID-19 vaccine and reports of serious side effects, such
-                as
-                allergic reactions or clotting problems, have been very rare.
               </p>
             </div>
+
 
           </div>
-          <div class="col">
-            <div class="img-box">
-              <img src="Images/undraw_medicine_b1ol.svg" alt="Picture of Doctors" class="img-fluid">
-            </div>
-          </div>
-
-
-        </div>
-    </article>
-    <article>
-
-    </article>
-    <div class="row">
-      <div class="col">
-        <div class="sub-title">
-          <h4> Who is eligible for the COVID-19 vaccine?</h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <article>
-            <div class="info-text">
-              <p>
-                The NHS is currently offering the COVID-19 vaccine to people most at risk.
-              </p>
-              <p>It's being given to:</p>
-              <ul>
-                <li>people aged 32 and over</li>
-                <li>people who will turn 32 before 1 July 2021</li>
-                <li>people at high risk from COVID-19 (clinically extremely vulnerable)</li>
-                <li>people who live or work in care homes</li>
-                <li>health and social care workers</li>
-                <li>people with a condition that puts them at higher risk (clinically vulnerable)</li>
-                <li>people with a learning disability</li>
-                <li>people who are a main carer for someone at high risk from COVID-19</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-       
-      </div>
-      <article>
-        <div class="row">
-          <div class="col">
-            <div class="info-text">
-              <p>
-                For further information as to whether if you qualify as ‘high risk’, please <a
-                  href="https://www.nhs.uk/conditions/coronavirus-covid-19/people-at-higher-risk/who-is-at-high-risk-from-coronavirus-clinically-extremely-vulnerable/"
-                  target="_blank">click here</a> for guidance from the NHS. <br>
-              
-
-              
-                If your GP has not been in touch already, please <a
-                  href="https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/book-coronavirus-vaccination/"
-                  target="_blank">click here</a> to book your vaccination if you fall into any of the aforementioned
-                categories. <br>
-              
-
-              
-                If you are not eligible yet, wait to be contacted. The NHS will let you know when it's your turn to have
-                the COVID-19 vaccine.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-      </article>
-
-
-      <article>
-        <div class="row">
-          <div class="col">
-            <div class="sub-title">
-              <h4>How is it administered?</h4>
-            </div>
-            <div class="info-text">
-              <p>
-                The COVID-19 vaccine is given as an injection into your upper arm.
-                It's given as 2 doses. You will have the second dose 3 to 12 weeks after having the first dose. Both
-                doses will be of the same vaccine.
-              </p>
-              <div class="sub-title">
-                <h4>What are the side effects?</h4>
-              </div>
-
-              <p>Most side effects of the COVID-19 vaccine are mild and should not last longer than a week, such as:</p>
-              <ul>
-                <li>a sore arm where the needle went in</li>
-                <li>feeling tired</li>
-                <li>a headache</li>
-                <li>feeling achy</li>
-                <li>feeling or being sick</li>
-              </ul>
-              <p>
-                You can take painkillers, such as paracetamol, if you need to.
-              </p>
-              <p>
-                You may get a high temperature or feel hot or shivery 1 or 2 days after having your vaccination. But if
-                you have a high temperature that lasts longer than 2 days, a new, continuous cough or a loss or change
-                to your sense of smell or taste you may have COVID-19. Stay at home and get a test.
-              </p>
-              <p>
-                If your symptoms get worse or you are worried, please call 111.
-              </p>
-
-      </article>
-      <article>
-        <div class="row">
-          <div class="col">
-            <div class="sub-title">
-              <h4>Allergic reactions</h4>
-            </div>
-            <div class="info-text">
-              <p>
-                Tell healthcare staff before you are vaccinated if you've ever had a serious allergic reaction. You
-                should not have the COVID-19 vaccine if you have ever had a serious allergic reaction (including
-                anaphylaxis) to:
-              <ul>
-                <li>a previous dose of the same vaccine</li>
-                <li>any of the ingredients in the vaccine</li>
-              </ul>
-              </p>
-              <p>
-                Serious allergic reactions are rare. If you do have a reaction to the vaccine, it usually happens in
-                minutes. Staff giving the vaccine are trained to deal with allergic reactions and treat them
-                immediately.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </article>
-
-      <article>
-        <div class="row">
-          <div class="col">
-
-            <div class="sub-title">
-              <h4>Reports of extremely rare blood clots</h4>
-            </div>
-            <div class="info-text">
-              <p>
-                Reports of an extremely rare blood clotting problem
-                affecting a small number of people who have had the Oxford/AstraZeneca vaccine. <br><br>
-                 Call 111 immediately if you get any of these symptoms starting from around 4 days to 4 weeks after being
-                vaccinated: 
-              </p>
-              <ul>
-                <li>a severe headache that is not relieved with painkillers or is getting worse</li>
-                <li>a headache that feels worse when you lie down or bend over</li>
-                <li>a headache that's unusual for you and occurs with blurred vision, feeling or being sick, problems
-                  speaking, weakness, drowsiness or seizures (fits)</li>
-                <li>a rash that looks like small bruises or bleeding under the skin</li>
-                <li>shortness of breath, chest pain, leg swelling or persistent abdominal (tummy) pain</li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article>
-        <div class="row">
-          <div class="col">
-            <div class="sub-title">
-              <h4>How effective is the COVID-19 vaccine?</h4>
-            </div>
-
-            <div class="info-text">
-              <p>
-                The first dose of the COVID-19 vaccine should give you good protection from COVID-19 from 3 or 4 weeks
-                after you've had it. However, you need to have the 2 doses of the vaccine to give you longer lasting
-                protection.
-              </p>
-              <p>
-                You can still get or spread COVID-19 even if you have the vaccine, therefore it is important to:
-              <ul>
-                <li>continue to follow social distancing guidance</li>
-                <li>if you can, wear something that covers your nose and mouth in places where it's hard to stay away
-                  from other people</li>
-              </ul>
-              </p>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <div class="row">
-        <div class="col">
-          <div class="sub-title">
-            <h4>Check the map to find your nearest vaccination center</h4>
-          </div>
-        </div>
-          
-      </div>
-        <div class="row">
-          <div class="col">
-            <div class="vac-centres" id="vaccine">
-              <!-- Google Map -->
-              <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 350px">
-                <iframe src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                  style="border:0" allowfullscreen></iframe>
-              </div>
-            </div>
-  
-          </div> 
-          <div class="col">
-            <div class="bookings">
-              <div class="b-title">
-                <h5>Book an Appointment</h5>
-              </div>
-              <form>
-                <div class="row">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="First name">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name">
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputAddress">Address</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                </div>
-                <div class="form-group">
-                  <label for="inputAddress2">Address 2</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity">
-                  </div>
-                  <div class="form-group col-md-2">
-                    <label for="inputZip">Postcode</label>
-                    <input type="text" class="form-control" id="inputZip">
-                  </div>
-                </div>
+          <div class="row">
+            <div class="col">
+              <div class="vac-ul">
+                <h4>How is it administered?</h4>
                 
-                <button type="submit" class="btn" style="background-color: #0d5957;">Book Now</button>
-              </form>              
+                <div class="info-text">
+                  <p>
+                    The COVID-19 vaccine is given as an injection into your upper arm.
+                    It's given as 2 doses. You will have the second dose 3 to 12 weeks after having the
+                    first dose. Both
+                    doses will be of the same vaccine.
+                  </p>
+                
+                <h4>What are the side effects?</h4>
+                <p>Most side effects of the COVID-19 vaccine are mild and should not last longer than a
+                  week, such as:
+                </p>
+                <ul>
+                  <li>a sore arm where the needle went in</li>
+                  <li>feeling tired</li>
+                  <li>a headache</li>
+                  <li>feeling achy</li>
+                  <li>feeling or being sick</li>
+                </ul>
+                <p>
+                  You can take painkillers, such as paracetamol, if you need to.
+                </p>
+                <p>
+                  You may get a high temperature or feel hot or shivery 1 or 2 days after having your
+                  vaccination. But
+                  if
+                  you have a high temperature that lasts longer than 2 days, a new, continuous cough
+                  or a loss or change
+                  to your sense of smell or taste you may have COVID-19. Stay at home and get a test.
+                </p>
+                <p>
+                  If your symptoms get worse or you are worried, please call 111.
+                </p>
+              </div>
             </div>
-            
-          </div>         
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="sub-title-l">
+                <h4>Allergic reactions</h4>
+              </div>
+              <div class="info-text">
+                <p>
+                  Tell healthcare staff before you are vaccinated if you've ever had a serious
+                  allergic reaction. You
+                  should not have the COVID-19 vaccine if you have ever had a serious allergic
+                  reaction (including
+                  anaphylaxis) to:
+                </p>
+                <ul>
+                  <li>a previous dose of the same vaccine</li>
+                  <li>any of the ingredients in the vaccine</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="sub-title-l">
+                <h4>Reports of extremely rare blood clots</h4>
+              </div>
+              <div class="info-text">
+                <p>
+                  Reports of an extremely rare blood clotting problem
+                  affecting a small number of people who have had the Oxford/AstraZeneca vaccine.
+                  <br><br>
+                  Call 111 immediately if you get any of these symptoms starting from around 4 days to
+                  4 weeks after
+                  being
+                  vaccinated:
+                </p>
+                <ul>
+                  <li>a severe headache that is not relieved with painkillers or is getting worse</li>
+                  <li>a headache that feels worse when you lie down or bend over</li>
+                  <li>a headache that's unusual for you and occurs with blurred vision, feeling or
+                    being sick, problems
+                    speaking, weakness, drowsiness or seizures (fits)</li>
+                  <li>a rash that looks like small bruises or bleeding under the skin</li>
+                  <li>shortness of breath, chest pain, leg swelling or persistent abdominal (tummy)
+                    pain</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="sub-title-l">
+                <h4>How effective is the COVID-19 vaccine?</h4>
+              </div>
+
+              <div class="info-text">
+                <p>
+                  The first dose of the COVID-19 vaccine should give you good protection from COVID-19
+                  from 3 or 4 weeks
+                  after you've had it. However, you need to have the 2 doses of the vaccine to give
+                  you longer lasting
+                  protection.
+                </p>
+                <p>
+                  Important: You can still get or spread COVID-19 even if you have the vaccine.
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="sub-title-l">
+                <h4>Check the map to find your nearest vaccination center</h4>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="b-title">
+                <h5>Map of Vaccination Centres</h5>
+              </div>
+
+              <div class="vac-centres" id="vaccine">
+                <!-- Google Map -->
+                <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 350px">
+                  <iframe src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="bookings">
+                <div class="b-title">
+                  <h5>Book an Appointment</h5>
+                </div>
+                <form class="b-form">
+                  <div class="row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name">
+                      <small>error</small>
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name">
+                      <small>error</small>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      <small>error</small>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <small>error</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress2">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2"
+                      placeholder="Apartment, studio, or floor">
+                    <small>error</small>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputCity">City</label>
+                      <input type="text" class="form-control" id="inputCity">
+                      <small>error</small>
+                    </div>
+                    <div class="form-group col-md-2">
+                      <label for="inputZip">Postcode</label>
+                      <input type="text" class="form-control" id="inputZip">
+                      <small>error</small>
+                    </div>
+                  </div><br>
+
+                  <button type="submit" class="book-btn" style="background-color: #0d5957; color: #fff;">Book
+                    Now</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
         </div>
-       
+
+
       </div>
 
-  </section>
-  <section id="after-covid19" class="section-3">
 
-    <div class="row">
-      <div class="col">
-        <div class="title">
-          <h2>Life after COVID-19</h2>
-        </div>
-      </div>
-    </div>
-
-    <article>
+    </section>
+    <section id="afterC19" class="section-3">
       <div class="row">
         <div class="col">
-          <div class="sub-title">
+          <div class="title">
+            <h2>Life after COVID-19</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="sub-title-l">
             <h4>Social distancing & changes to everyday life</h4>
           </div>
           <div class="info-text">
-            <p>Social distancing, also called “physical distancing,” means keeping a safe space between yourself and other
-              people. <br>
-            
-              To practice social or physical distancing, stay at least 2 metres (about 2 arm lengths) from other people
-              who are
-              not from your household in both indoor and outdoor spaces. <br>
-            
-              Social distancing should be practiced in combination with other everyday preventive actions to reduce the
+            <p>
+             Social distancing should be practiced in combination with other everyday preventive actions to reduce
+              the
               spread
               of COVID-19, including wearing masks, avoiding touching your face with unwashed hands, and frequently
               washing your
               hands with soap and water for at least 20 seconds.
             </p>
-          </div>        
+          </div>
         </div>
       </div>
-    </article>
-    <article>
       <div class="row">
         <div class="col">
-          <div class="sub-title">
-            <h4>How has lockdown changed in England from 17 May?</h4>
-          </div>
-          <div class="sub-title">
-            <h4>Meeting up</h4>
-          </div>
-          <ul>
-            <li>People can now meet in groups of up to 30 outdoors</li>
-            <li>Up to 30 people can attend weddings, receptions and other life events</li>
-            <li>Number of people who can attend a funeral is no longer capped, but determined by the size of venue</li>
-            <li>Up to 30 are allowed to attend a support group or parent-and-child group (not counting under fives)</li>
-            <li>Care home residents can have up to five named visitors, and more freedom for visits out of the home</li>
-          </ul>
-
-          <p>Social distancing guidance is also changing. Contact with close family and friends is described as a matter
+          <p>Social distancing guidance is also changing. Contact with close family and friends is described as a
+            matter
             of
             personal judgement, but people are asked to remain cautious around close contact, like hugging.
           </p>
         </div>
       </div>
-
-    </article>
-    <article>
       <div class="row">
         <div class="col">
-          <div class="sub-title">
-            <h4>Leisure and entertainment</h4>
+          <div class="sub-title-l">
+            <h4>Travel </h4>
           </div>
-          <ul>
-            <li>Pubs, bars, cafes and restaurants will be allowed to serve customers indoors</li>
-            <li>Indoor entertainment such as museums, cinemas and children's play areas can open</li>
-            <li>Theatres, concert halls, conference centres and sports stadiums can all reopen</li>
-            <li>Organised adult sports and exercise classes can restart indoors</li>
-            <li>Steam rooms and saunas may reopen</li>
-            <li>Hotels, hostels and B&Bs can reopen</li>
-          </ul>
+          <div class="info-text">
+            <p>
+              International travel from England is now completely legal, but strict border controls remain in place.
+              Different
+              rules apply for those arriving in Wales, Scotland, and Northern Ireland. <br>
+
+              There is currently a ‘traffic light’ system that sets out
+              clearly different
+              testing and self-isolation requirements for people entering England. <br>
+
+              As the virus is still spreading in many parts of the world, people should not be travelling to amber
+              or red
+              countries. <br>
+
+              Countries on the green list pose the lowest risk, therefore passengers who have only visited or
+              transited through
+              a green list country will not be required to quarantine on arrival in England. They will be required
+              to fill in
+              the passenger locator form, provide a valid notification of a negative test result prior to travel and
+              take a
+              sequencing test on day 2 after arrival.<br>
+
+
+              You can see a full list of countries in each category on <a
+                href="https://www.gov.uk/guidance/red-amber-and-green-list-rules-for-entering-england">GOV.UK</a>
+            </p>
+          </div>
         </div>
-      </div>
-    </article>
-    <article>
-      <div class="row">
-        <div class="col">
-          <div class="sub-title">
-            <h4>For local cases and further information:</h4>
-          </div>
+    </section>
 
-          <a href="https://digital.nhs.uk/dashboards/coronavirus-in-your-area"></a>
-          <div class="row">
-            <div class="col">
-              <div class="sub-title">
-                <h4>Travel </h4>
-              </div>
-              <div class="info-text">
-                <p>
-                  International travel from England is now completely legal, but strict border controls remain in place.
-                  Different
-                  rules apply for those arriving in Wales, Scotland, and Northern Ireland. <br><br>
+  </div>
 
-                  There is currently a new ‘traffic light’ system that came into force on May 17th, that sets out
-                  clearly different
-                  testing and self-isolation requirements for people entering England. <br><br>
-
-                  As the virus is still spreading in many parts of the world, people should not be travelling to amber
-                  or red
-                  countries. <br><br>
-
-                  Countries on the green list pose the lowest risk, therefore passengers who have only visited or
-                  transited through
-                  a green list country will not be required to quarantine on arrival in England. They will be required
-                  to fill in
-                  the passenger locator form, provide a valid notification of a negative test result prior to travel and
-                  take a
-                  sequencing test on day 2 after arrival. <br><br>
-
-                  The risk posed by individual countries will be continuously monitored and the green, amber and red
-                  lists will be
-                  updated regularly. <br><br>
-                  
-
-                  You can see a full list of countries in each category on <a
-                    href="https://www.gov.uk/guidance/red-amber-and-green-list-rules-for-entering-england"></a>
-                </p>
-              </div>
-            </div>
-    </article>
-    </div>
-  </section>
   <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
       <p>
         Copyright &copy; Group 4
-        <span id="date">. all rights reserved.</span>
+        <span id="date">. All rights reserved.</span>
       </p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js"></script> 
+
+
 
 </body>
 
