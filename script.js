@@ -18,22 +18,27 @@ async function currentInfo(){
   
    console.log(td)
   
-   td.innerText = totalCases;
+   td.innerText = numberWithCommas(totalCases);
    dataResult.appendChild(td);
 
-   td1.innerText = totalRecovery;
+   td1.innerText = numberWithCommas(totalRecovery);
    dataResult.appendChild(td1);
 
-   td2.innerText = totalDeaths;
+   td2.innerText = numberWithCommas(totalDeaths);
    dataResult.appendChild(td2);
+
+   function numberWithCommas(x) {
+    var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+}
     
   
   }) 
 };
+  currentInfo();
 
-currentInfo();
-  
-// time
+// TIME
 const hours = document.getElementById('hours');
 const seconds = document.getElementById('seconds');
 const minutes = document.getElementById('minutes');
@@ -47,14 +52,16 @@ function currentTime() {
     hours.innerText = currentHour;
     seconds.innerText = currentMin;
     minutes.innerText = currentSec;
-    time = hours + ':' + seconds + ':' + minutes;
-    console.log(time)
+
+    // if(currentMin < 10){
+    //   seconds.innerText = '0' + seconds;
+    // }
 }
 currentTime();
 setInterval(currentTime, 1000);
 
 
-// Video Control
+// VIDEO CONTROL
 
 const video = document.getElementById('video');
 
@@ -68,5 +75,30 @@ function videoPlay(){
 
 video.addEventListener('click', videoPlay);
 
+//Bookings form
 
+const bookBtn = document.querySelector('.book-btn');
+
+const small = document.querySelectorAll('small');
+const bookingForm = document.querySelector('.b-form');
+
+
+const checkInputs = () => {
+  const formInput = document.getElementsByTagName('input');
+  for(let i = 0; i < formInput.length; i++){
+    if(formInput[i].value === ""){
+      formInput[i].classList.add('error');
+      small[i].classList.add('error');
+      small[i].innerText = 'Field cannot be Empty!';  
+    }
+  }
+  
+}
+
+//EVENT LISTENER
+bookBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  checkInputs();
+  
+});
 
